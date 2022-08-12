@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="container-header">
+        <h1>Clients</h1>
+        <div class="search-input">
+            <input placeholder="Search Client by ID" type="text" name="search_id" [(ngModel)]="search_id">
+            <mat-icon id='update-button' (click)="findModal(search_id)">search </mat-icon>
+        </div>
+        
+        <button (click)="openModal('create-modal', 0)">Create Client</button>
+
+        <div *ngIf="client_found" class="modal" id="find-modal">
+            <div class="modal-content">
+                <mat-icon id='close-button' (click)="closeModal('find-modal')">close</mat-icon>
+                <div class="modal-client">
+                    <div class="card-header">
+                        <p>{{client_found.name}}</p>
+                        <p>{{client_found.id}}</p>
+                    </div>
+                    <div class="card-body">
+                        <p>{{client_found.email}}</p>
+                        <p>{{client_found.phone}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="clients">
+        <div *ngFor="let client of clients" class="client-card">
+            <div class="card-header">
+                <p>{{client.name}}</p>
+                <p>{{client.id}}</p>
+            </div>
+            <div class="card-body">
+                <p>{{client.email}}</p>
+                <p>{{client.phone}}</p>
+            </div>
+
+            <div class="buttons">
+                <button (click)="openModal('update-modal', client.id)">
+                    <mat-icon id='update-button'>create</mat-icon>
+                </button>
+                <button (click)="deleteUser(client.id)">
+                    <mat-icon id='delete-button'>delete</mat-icon>
+                </button>
+            </div>
+
+
+            <div class="modal" id="update-modal">
+                <div class="modal-content">
+                    <mat-icon id='close-button' (click)="closeModal('update-modal')">close</mat-icon>
+                    <form>
+                        <input placeholder="Name" type="text" name="name" [(ngModel)]="name">
+                        <input placeholder="Email" type="text" name="email" [(ngModel)]="email">
+                        <input placeholder="Phone" type="text" name="phone" [(ngModel)]="phone">
+                        <button type="submit" (click)="updateUser()">Update Client</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="create-modal">
+    <div class="modal-content">
+        <mat-icon id='close-button' (click)="closeModal('create-modal')">close</mat-icon>
+        <form>
+            <input placeholder="Name" type="text" name="name" [(ngModel)]="name">
+            <input placeholder="Email" type="text" name="email" [(ngModel)]="email">
+            <input placeholder="Phone" type="text" name="phone" [(ngModel)]="phone">
+            <button type="submit" (click)="addClient()">Create Client</button>
+        </form>
+    </div>
+</div>
