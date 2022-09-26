@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
 @Service
 public class UserService {
 
@@ -24,5 +26,12 @@ public class UserService {
     public Optional<Users> findUsersById(Long id){
         Optional<Users> user = repository.findById(id);
         return user;
+    }
+
+    public Users findUsersByUsername(String username){
+       
+        return repository.findByUsername(username)
+        .orElseThrow(()-> new EntityNotFoundException("User " + username + " not found"));
+        
     }
 }

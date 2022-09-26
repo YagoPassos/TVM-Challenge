@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc1dd764-f1a3-4dc9-a58c-faa7f2f9a1cb" name="Changes" comment="" />
+    <list default="true" id="565b4661-ec70-48cc-9e86-9d5004ba5570" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tvm_challenge/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/TvmChallengeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/TvmChallengeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/entity/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/entity/Clients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/entity/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/repository/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tvm_challenge/src/main/java/com/tvm/tvm_challenge/services/ClientService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="2DFoslk7CBzuzghoXVnCX8K50RD" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2ES9Flw9uwR52qPShmyzvcHp4s0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,12 +42,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dc1dd764-f1a3-4dc9-a58c-faa7f2f9a1cb" name="Changes" comment="" />
-      <created>1660304402932</created>
+      <changelist id="565b4661-ec70-48cc-9e86-9d5004ba5570" name="Changes" comment="" />
+      <created>1662578028395</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1660304402932</updated>
-      <workItem from="1660304404233" duration="88000" />
+      <updated>1662578028395</updated>
+      <workItem from="1662578034302" duration="137000" />
     </task>
     <servers />
   </component>

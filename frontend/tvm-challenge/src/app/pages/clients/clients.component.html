@@ -1,6 +1,6 @@
 <div class="container">
     <div class="container-header">
-        <h1>Clients</h1>
+        <h1 (click)="doSome()">Clients</h1>
         <div class="search-input">
             <input placeholder="Search Client by ID" type="text" name="search_id" [(ngModel)]="search_id">
             <mat-icon id='update-button' (click)="findModal(search_id)">search </mat-icon>

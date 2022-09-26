@@ -33,14 +33,32 @@ export class ClientsComponent implements OnInit {
     this.getClients().subscribe(e => {
       this.clients = e;
     });
+    
+    this.getUsers().subscribe(e => {
+      console.log(e)
+    });
+
+    this.getRoles().subscribe(e => {
+      console.log(e)
+    });
+
   }
 
-  public getClients(): Observable<Client[]> {
-    return this.http.get<Client[]>(`${this.baseUrl}/client`);
+  public getClients(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/clients`);
   }
+
+  public getUsers(): Observable<Client[]> {
+    return this.http.get<Client[]>(`${this.baseUrl}/users`);
+  }
+
+  public getRoles(): Observable<Client[]> {
+    return this.http.get<Client[]>(`${this.baseUrl}/roles`);
+  }
+
 
   public getClientById(e: number) {
-    return this.http.get<Client>(`${this.baseUrl}/client/${e}`)
+    return this.http.get<Client>(`${this.baseUrl}/clients/${e}`)
   }
 
   public addClient() {
@@ -49,7 +67,7 @@ export class ClientsComponent implements OnInit {
       email: this.email,
       phone: this.phone,
     }
-    return this.http.post<Client[]>(`${this.baseUrl}/client`, client).subscribe(results => {
+    return this.http.post<Client[]>(`${this.baseUrl}/clients`, client).subscribe(results => {
       this.getClients().subscribe(e => {
         this.clients = e;
       });
@@ -67,7 +85,21 @@ export class ClientsComponent implements OnInit {
 
 
   }
+ 
+  public doSome(){
+    this.getClients().subscribe(e => {
+      this.clients = e;
+    });
+    
+    this.getUsers().subscribe(e => {
+      console.log(e)
+    });
 
+    this.getRoles().subscribe(e => {
+      console.log(e)
+    });
+
+  }
   public updateUser() {
 
     const client = {
@@ -76,7 +108,7 @@ export class ClientsComponent implements OnInit {
       email: this.email,
       phone: this.phone,
     }
-    this.http.put(`${this.baseUrl}/client`, client).subscribe(results => {
+    this.http.put(`${this.baseUrl}/clients`, client).subscribe(results => {
       this.getClients().subscribe(e => {
         this.clients = e;
       });
@@ -96,7 +128,7 @@ export class ClientsComponent implements OnInit {
 
   deleteUser(e: number) {
     console.log(e)
-    return this.http.delete(`${this.baseUrl}/client/${e}`).subscribe(results => {
+    return this.http.delete(`${this.baseUrl}/clients/${e}`).subscribe(results => {
       this.getClients().subscribe(e => {
         this.clients = e;
       });

@@ -1,16 +1,18 @@
 package com.tvm.tvm_challenge.services;
 
-import com.tvm.tvm_challenge.entity.Clients;
-import com.tvm.tvm_challenge.repository.ClientRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tvm.tvm_challenge.entity.Clients;
+import com.tvm.tvm_challenge.repository.ClientRepository;
+
 @Service
 public class ClientService {
-
-    private final ClientRepository repository;
+    @Autowired
+    ClientRepository repository;
 
     public ClientService(ClientRepository repository) {
         this.repository = repository;
@@ -30,9 +32,7 @@ public class ClientService {
     }
 
     public void updateClient (Clients clients){
-        System.out.println(clients);
         if(clients.getId() > 0)
-            System.out.println(clients);
             repository.save(clients);
     }
 

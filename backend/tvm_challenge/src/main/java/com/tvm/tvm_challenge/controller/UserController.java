@@ -34,11 +34,4 @@ public class UserController {
     public void addUsers(@RequestBody Users user){
         service.addUsers(user);
     }
-
-    @PostMapping("/login")
-    public Users returnToken(@RequestBody Users users) {
-        return users;
-    }
-
-
 }

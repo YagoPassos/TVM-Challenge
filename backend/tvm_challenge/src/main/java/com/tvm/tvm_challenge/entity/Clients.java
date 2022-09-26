@@ -1,24 +1,26 @@
 package com.tvm.tvm_challenge.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Clients {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     private String name;
     private String email;
     private String phone;
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
